@@ -72,7 +72,7 @@
 
 ```bash
 cd 02_机器运行项目
-python -m pip install -r outputs/strategy_universe/20260828_113225_t1expiry/requirements_reproduction.txt
+python -m pip install -r requirements_covered_call.txt
 python -m unittest discover -s tests -v
 python -c "from covered_call.query import StrategyUniverse; print(len(StrategyUniverse().registry))"
 python scripts/verify_strategy_universe.py \
