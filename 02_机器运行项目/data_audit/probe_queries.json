@@ -1,0 +1,31 @@
+[
+  {
+    "sql": "SELECT * FROM chinaoptioncontpro WHERE S_INFO_WINDCODE LIKE %s OR S_INFO_NAME LIKE %s",
+    "parameters": [
+      "510050%",
+      "%50ETF%"
+    ],
+    "rows": 3,
+    "seconds": 0.136,
+    "queried_at": "2026-08-27T11:12:52.992093+08:00"
+  },
+  {
+    "sql": "SELECT * FROM chinaoptiondescription WHERE S_INFO_EXCODE LIKE %s ORDER BY S_INFO_FTDATE DESC LIMIT 12",
+    "parameters": [
+      "510050%"
+    ],
+    "rows": 12,
+    "seconds": 1.71,
+    "queried_at": "2026-08-27T11:12:54.751778+08:00"
+  },
+  {
+    "sql": "SELECT * FROM chinamutualfunddescription WHERE F_INFO_WINDCODE IN (%s,%s)",
+    "parameters": [
+      "510050.SH",
+      "510050.OF"
+    ],
+    "rows": 1,
+    "seconds": 0.049,
+    "queried_at": "2026-08-27T11:12:54.814013+08:00"
+  }
+]

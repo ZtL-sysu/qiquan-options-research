@@ -1,0 +1,12 @@
+﻿TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,TABLE_ROWS,TABLE_COMMENT
+financedata,chinaoptioncalendar,BASE TABLE,InnoDB,66922,
+financedata,chinaoptioncontpro,BASE TABLE,InnoDB,2929,
+financedata,chinaoptiondescription,BASE TABLE,InnoDB,206820,
+financedata,chinaoptioneodprices,BASE TABLE,InnoDB,19217861,
+financedata,chinaoptionindexeodprices,BASE TABLE,InnoDB,34944,
+financedata,chinaoptionvaluation,BASE TABLE,InnoDB,22622374,
+financedata,coptioncontprochange,BASE TABLE,InnoDB,11167,
+financedata,coptiondescriptionchange,BASE TABLE,InnoDB,8094,
+financedata,coptionimpliedvolatility,BASE TABLE,InnoDB,21769016,
+financedata,coptionsmarginratio,BASE TABLE,InnoDB,18482932,
+financedata,windchinaoptionvaluation,BASE TABLE,InnoDB,20957516,

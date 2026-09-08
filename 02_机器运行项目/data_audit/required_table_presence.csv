@@ -1,0 +1,13 @@
+﻿目标表,实际表名,当前库当前账号可见
+ChinaOptionDescription,chinaoptiondescription,True
+ChinaOptionEODPrices,chinaoptioneodprices,True
+ChinaOptionValuation,chinaoptionvaluation,True
+ChinaOptionCalendar,chinaoptioncalendar,True
+ChinaOptionContpro,chinaoptioncontpro,True
+ChinaOptionDailyStatistics,,False
+ChinaClosedFundEODPrice,chinaclosedfundeodprice,True
+ChinaMutualFundDescription,chinamutualfunddescription,True
+WINDFUNDDIVIDEND,,False
+WINDBenchmarkinterestrate,windbenchmarkinterestrate,True
+RalatedSecuritiesCode,,False
+AShareCalendar,asharecalendar,True

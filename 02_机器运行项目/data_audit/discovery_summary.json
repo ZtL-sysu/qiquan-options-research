@@ -1,0 +1,21 @@
+{
+  "database": "financedata",
+  "audit_time": "2026-08-27T11:21:20.937386+08:00",
+  "visible_tables": 200,
+  "visible_columns": 5437,
+  "option_tables": [
+    "chinaoptioncalendar",
+    "chinaoptioncontpro",
+    "chinaoptiondescription",
+    "chinaoptioneodprices",
+    "chinaoptionindexeodprices",
+    "chinaoptionvaluation",
+    "coptioncontprochange",
+    "coptiondescriptionchange",
+    "coptionimpliedvolatility",
+    "coptionsmarginratio",
+    "windchinaoptionvaluation"
+  ],
+  "health_check": "passed",
+  "scope": "当前连接账号在当前库可见元数据；不能推断其他库或无权限对象"
+}

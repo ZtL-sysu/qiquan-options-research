@@ -1,0 +1,16 @@
+{
+  "sample_date": "20250715",
+  "underlying": "510050.SH",
+  "raw_spot": 2.855,
+  "call_count": 48,
+  "expiry_count": 4,
+  "corrected_call_count": 12,
+  "adjusted_call_count_asof": 0,
+  "zero_volume_calls": 0,
+  "max_delta_difference": 0.14039999999999997,
+  "primary_iv_nonnull": 0,
+  "wind_iv_nonnull": 48,
+  "checks_passed": 19,
+  "checks_total": 19,
+  "completeness_scope": "数据库内部双向集合核对；未与交易所当日全量档案独立逐条对账"
+}

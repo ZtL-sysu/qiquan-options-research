@@ -1,0 +1,13 @@
+﻿**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/.pytest_cache/
+**/.codex_work/
+**/.env
+**/数据库本地配置.json
+**/config.local.json
+**/data_mart/
+**/outputs/
+**/*.zip
+**/*.parquet
+**/03_交付文件清单.json

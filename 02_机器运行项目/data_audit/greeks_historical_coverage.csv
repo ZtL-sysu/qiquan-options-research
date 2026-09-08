@@ -1,0 +1,13 @@
+﻿表名,日期,在市代码数,record_count,unique_codes,W_ANAL_UNDERLYINGIMPLIEDVOL,W_ANAL_DELTA,W_ANAL_GAMMA,W_ANAL_THETA,W_ANAL_VEGA,W_ANAL_RHO
+chinaoptionvaluation,20150209,40,40,40,0,40,40,40,40,40
+windchinaoptionvaluation,20150209,40,0,0,0,0,0,0,0,0
+chinaoptionvaluation,20170405,66,66,66,0,66,66,66,66,66
+windchinaoptionvaluation,20170405,66,56,56,56,56,56,56,56,56
+chinaoptionvaluation,20241203,212,212,212,0,212,212,212,212,212
+windchinaoptionvaluation,20241203,212,212,212,212,212,212,212,212,212
+chinaoptionvaluation,20250715,96,96,96,0,96,96,96,96,96
+windchinaoptionvaluation,20250715,96,96,96,96,96,96,96,96,96
+chinaoptionvaluation,20251218,180,180,180,0,180,180,180,180,180
+windchinaoptionvaluation,20251218,180,180,180,177,180,180,180,180,180
+chinaoptionvaluation,20260826,94,94,94,0,0,0,0,0,0
+windchinaoptionvaluation,20260826,94,94,94,94,94,94,94,94,94

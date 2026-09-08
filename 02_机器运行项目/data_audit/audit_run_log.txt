@@ -1,0 +1,290 @@
+连接成功：financedata，耗时 0.511 秒
+表数 200 字段数 5437
+TABLE_SCHEMA                TABLE_NAME TABLE_TYPE ENGINE  TABLE_ROWS TABLE_COMMENT
+ financedata       chinaoptioncalendar BASE TABLE InnoDB       66922              
+ financedata        chinaoptioncontpro BASE TABLE InnoDB        2929              
+ financedata    chinaoptiondescription BASE TABLE InnoDB      206820              
+ financedata      chinaoptioneodprices BASE TABLE InnoDB    19217861              
+ financedata chinaoptionindexeodprices BASE TABLE InnoDB       34944              
+ financedata      chinaoptionvaluation BASE TABLE InnoDB    22622374              
+ financedata      coptioncontprochange BASE TABLE InnoDB       11167              
+ financedata  coptiondescriptionchange BASE TABLE InnoDB        8094              
+ financedata  coptionimpliedvolatility BASE TABLE InnoDB    21769016              
+ financedata       coptionsmarginratio BASE TABLE InnoDB    18482932              
+ financedata  windchinaoptionvaluation BASE TABLE InnoDB    20957516              
+                       目标表                       实际表名  当前库当前账号可见
+    ChinaOptionDescription     chinaoptiondescription       True
+      ChinaOptionEODPrices       chinaoptioneodprices       True
+      ChinaOptionValuation       chinaoptionvaluation       True
+       ChinaOptionCalendar        chinaoptioncalendar       True
+        ChinaOptionContpro         chinaoptioncontpro       True
+ChinaOptionDailyStatistics                                 False
+   ChinaClosedFundEODPrice    chinaclosedfundeodprice       True
+ChinaMutualFundDescription chinamutualfunddescription       True
+          WINDFUNDDIVIDEND                                 False
+ WINDBenchmarkinterestrate  windbenchmarkinterestrate       True
+     RalatedSecuritiesCode                                 False
+            AShareCalendar             asharecalendar       True
+相关表: ['asharecalendar', 'asharedividend', 'chinaclosedfundeodprice', 'chinaetfinvestclass', 'chinaetfpchredmlist', 'chinaetfpchredmmembers', 'chinamutualfundbenchmarkeod', 'chinamutualfunddescription', 'chinaoptioncalendar', 'chinaoptioncontpro', 'chinaoptiondescription', 'chinaoptioneodprices', 'chinaoptionindexeodprices', 'chinaoptionvaluation', 'coptioncontprochange', 'coptiondescriptionchange', 'coptionimpliedvolatility', 'coptionsmarginratio', 'globalfundindexeodwind', 'shszrelatedsecurities', 'windbenchmarkinterestrate', 'windchinaoptionvaluation', 'windcustomcode']
+               TABLE_NAME                 COLUMN_NAME   COLUMN_TYPE COLUMN_COMMENT
+           asharedividend                   OBJECT_ID  varchar(100)               
+           asharedividend                   WIND_CODE   varchar(40)               
+           asharedividend             S_INFO_WINDCODE   varchar(40)               
+           asharedividend              S_DIV_PROGRESS   varchar(10)               
+           asharedividend              STK_DVD_PER_SH decimal(20,8)               
+           asharedividend     CASH_DVD_PER_SH_PRE_TAX decimal(24,8)               
+           asharedividend   CASH_DVD_PER_SH_AFTER_TAX decimal(24,8)               
+           asharedividend               EQY_RECORD_DT    varchar(8)               
+           asharedividend                       EX_DT    varchar(8)               
+           asharedividend               DVD_PAYOUT_DT    varchar(8)               
+           asharedividend       LISTING_DT_OF_DVD_SHR    varchar(8)               
+           asharedividend            S_DIV_PRELANDATE    varchar(8)               
+           asharedividend              S_DIV_SMTGDATE    varchar(8)               
+           asharedividend                  DVD_ANN_DT    varchar(8)               
+           asharedividend              S_DIV_BASEDATE    varchar(8)               
+           asharedividend             S_DIV_BASESHARE decimal(20,4)               
+           asharedividend                  CRNCY_CODE   varchar(10)               
+           asharedividend                      ANN_DT    varchar(8)               
+           asharedividend                  IS_CHANGED  decimal(5,0)               
+           asharedividend               REPORT_PERIOD    varchar(8)               
+           asharedividend                S_DIV_CHANGE varchar(1000)               
+           asharedividend             S_DIV_BONUSRATE decimal(20,8)               
+           asharedividend         S_DIV_CONVERSEDRATE decimal(20,8)               
+           asharedividend                        MEMO  varchar(200)               
+           asharedividend              S_DIV_PREANNDT    varchar(8)               
+           asharedividend                S_DIV_OBJECT  varchar(100)               
+           asharedividend                 IS_TRANSFER  decimal(1,0)               
+           asharedividend   DISTRI_PROFIT_CONSOLIDATE decimal(20,4)               
+           asharedividend   DISTRI_PROFIT_PARENT_COMP decimal(20,4)               
+           asharedividend                TOT_CASH_DVD decimal(20,4)               
+           asharedividend          OTHER_TOT_CASH_DVD decimal(20,4)               
+           asharedividend                      OPDATE          date               
+           asharedividend                      OPMODE    varchar(1)               
+           asharedividend              DIVIDEND_BATCH decimal(20,0)               
+           asharedividend                     TOT_SHR decimal(20,4)               
+           asharedividend           DIV_BONUSRATE_DIF decimal(24,8)               
+           asharedividend          DISTRIBUTION_MODEL decimal(20,0)               
+           asharedividend                      SEC_ID   varchar(10)               
+           asharedividend CASH_DVD_PER_SH_PRE_TAX_DIF decimal(24,8)               
+           asharedividend       DIV_CONVERSEDRATE_DIF decimal(24,8)               
+           asharedividend                      ANN_ID decimal(11,0)               
+           asharedividend  CASH_DVD_PER_SH_AFTER_TAX1 decimal(24,8)               
+      chinaoptioncalendar                   OBJECT_ID  varchar(100)               
+      chinaoptioncalendar                  TRADE_DAYS   varchar(40)               
+      chinaoptioncalendar           S_INFO_EXCHMARKET   varchar(40)               
+      chinaoptioncalendar                      OPDATE          date               
+      chinaoptioncalendar                      OPMODE    varchar(1)               
+       chinaoptioncontpro                   OBJECT_ID  varchar(100)               
+       chinaoptioncontpro             S_INFO_WINDCODE   varchar(40)               
+       chinaoptioncontpro                 S_INFO_CODE   varchar(20)               
+       chinaoptioncontpro                 S_INFO_NAME   varchar(40)               
+       chinaoptioncontpro                S_INFO_ENAME  varchar(100)               
+       chinaoptioncontpro               S_INFO_EXNAME   varchar(20)               
+       chinaoptioncontpro                 S_INFO_TYPE   varchar(20)               
+       chinaoptioncontpro  S_INFO_EUROAMERICANBERMUDA   varchar(10)               
+       chinaoptioncontpro     S_INFO_SETTLEMENTMETHOD   varchar(10)               
+       chinaoptioncontpro           S_INFO_LISTEDDATE    varchar(8)               
+       chinaoptioncontpro           S_INFO_DELISTDATE    varchar(8)               
+       chinaoptioncontpro          S_INFO_STRIKERATIO decimal(20,4)               
+       chinaoptioncontpro              S_INFO_CEVALUE decimal(20,4)               
+       chinaoptioncontpro              S_INFO_COVALUE   varchar(80)               
+       chinaoptioncontpro              S_INFO_LSMONTH  varchar(200)               
+       chinaoptioncontpro        S_INFO_MINPRICEFLUCT   varchar(40)               
+       chinaoptioncontpro               S_INFO_THOURS  varchar(200)               
+       chinaoptioncontpro      S_INFO_LASTTRADINGDATE  varchar(200)               
+       chinaoptioncontpro               S_INFO_LSDATE  varchar(200)               
+       chinaoptioncontpro           S_INFO_LASTSETTLE  varchar(200)               
+       chinaoptioncontpro             S_INFO_TRADEFEE  varchar(200)               
+       chinaoptioncontpro             S_INFO_POSLIMIT  varchar(800)               
+       chinaoptioncontpro          S_INFO_MINPOSLIMIT  varchar(800)               
+       chinaoptioncontpro          S_INFO_OPTIONPRICE   varchar(20)               
+       chinaoptioncontpro        S_INFO_EXERCISINGEND   varchar(80)               
+       chinaoptioncontpro          S_INFO_STRIKEPRICE  varchar(800)               
+       chinaoptioncontpro           S_INFO_SIMULATION    varchar(1)               
+       chinaoptioncontpro            S_INFO_QUOTEUNIT   varchar(40)               
+       chinaoptioncontpro               S_INFO_COUNIT decimal(20,4)               
+       chinaoptioncontpro      S_INFO_COUNITDIMENSION   varchar(40)               
+       chinaoptioncontpro                   S_INFO_ID   varchar(40)               
+       chinaoptioncontpro                      OPDATE          date               
+       chinaoptioncontpro                      OPMODE    varchar(1)               
+       chinaoptioncontpro                CHANGE_LIMIT  varchar(800)               
+       chinaoptioncontpro             EXER_METHODCODE  decimal(9,0)               
+       chinaoptioncontpro             S_INFO_UDLSECID   varchar(40)               
+       chinaoptioncontpro               CONTRACT_TYPE  varchar(200)               
+       chinaoptioncontpro             S_INFO_TYPECODE  decimal(9,0)               
+       chinaoptioncontpro        SETTLEMENTMETHODCODE  decimal(9,0)               
+       chinaoptioncontpro              TRADECODE_RULE  varchar(800)               
+   chinaoptiondescription                   OBJECT_ID  varchar(100)               
+   chinaoptiondescription             S_INFO_WINDCODE   varchar(40)               
+   chinaoptiondescription                 S_INFO_CODE   varchar(40)               
+   chinaoptiondescription                 S_INFO_NAME  varchar(100)               
+   chinaoptiondescription               S_INFO_SCCODE   varchar(50)               
+   chinaoptiondescription              S_INFO_CALLPUT  decimal(9,0)               
+   chinaoptiondescription          S_INFO_STRIKEPRICE decimal(20,4)               
+   chinaoptiondescription                S_INFO_MONTH    varchar(6)               
+   chinaoptiondescription         S_INFO_MATURITYDATE    varchar(8)               
+   chinaoptiondescription               S_INFO_FTDATE    varchar(8)               
+   chinaoptiondescription      S_INFO_LASTTRADINGDATE    varchar(8)               
+   chinaoptiondescription        S_INFO_EXERCISINGEND    varchar(8)               
+   chinaoptiondescription               S_INFO_LDDATE    varchar(8)               
+   chinaoptiondescription               S_INFO_LPRICE decimal(20,4)               
+   chinaoptiondescription                S_INFO_TRADE    varchar(1)               
+   chinaoptiondescription               S_INFO_EXCODE   varchar(20)               
+   chinaoptiondescription               S_INFO_EXNAME  varchar(100)               
+   chinaoptiondescription               S_INFO_COUNIT decimal(20,4)               
+   chinaoptiondescription                      OPDATE          date               
+   chinaoptiondescription                      OPMODE    varchar(1)               
+     chinaoptioneodprices                   OBJECT_ID  varchar(100)               
+     chinaoptioneodprices             S_INFO_WINDCODE   varchar(40)               
+     chinaoptioneodprices                    TRADE_DT    varchar(8)               
+     chinaoptioneodprices                   S_DQ_OPEN decimal(20,4)               
+     chinaoptioneodprices                   S_DQ_HIGH decimal(20,4)               
+     chinaoptioneodprices                    S_DQ_LOW decimal(20,4)               
+     chinaoptioneodprices                  S_DQ_CLOSE decimal(20,4)               
+     chinaoptioneodprices                 S_DQ_SETTLE decimal(20,4)               
+     chinaoptioneodprices                 S_DQ_VOLUME decimal(20,4)               
+     chinaoptioneodprices                 S_DQ_AMOUNT decimal(20,4)               
+     chinaoptioneodprices                     S_DQ_OI decimal(20,4)               
+     chinaoptioneodprices               S_DQ_OICHANGE decimal(20,4)               
+     chinaoptioneodprices              S_DQ_PRESETTLE decimal(20,4)               
+     chinaoptioneodprices                S_DQ_CHANGE1 decimal(20,4)               
+     chinaoptioneodprices                S_DQ_CHANGE2 decimal(20,4)               
+     chinaoptioneodprices             S_DQ_PCTCHANGE1 decimal(20,4)               
+     chinaoptioneodprices             S_DQ_PCTCHANGE2 decimal(20,4)               
+     chinaoptioneodprices                      OPDATE          date               
+     chinaoptioneodprices                      OPMODE    varchar(1)               
+chinaoptionindexeodprices                   OBJECT_ID  varchar(100)               
+chinaoptionindexeodprices             S_INFO_WINDCODE   varchar(40)               
+chinaoptionindexeodprices                 S_INFO_NAME   varchar(50)               
+chinaoptionindexeodprices                    TRADE_DT    varchar(8)               
+chinaoptionindexeodprices                  CRNCY_CODE   varchar(10)               
+chinaoptionindexeodprices               S_DQ_PRECLOSE decimal(20,4)               
+chinaoptionindexeodprices                   S_DQ_OPEN decimal(20,4)               
+chinaoptionindexeodprices                   S_DQ_HIGH decimal(20,4)               
+chinaoptionindexeodprices                    S_DQ_LOW decimal(20,4)               
+chinaoptionindexeodprices                  S_DQ_CLOSE decimal(20,4)               
+chinaoptionindexeodprices                 S_DQ_CHANGE decimal(20,4)               
+chinaoptionindexeodprices              S_DQ_PCTCHANGE decimal(20,4)               
+chinaoptionindexeodprices                 S_DQ_VOLUME decimal(20,4)               
+chinaoptionindexeodprices                 S_DQ_AMOUNT decimal(20,4)               
+chinaoptionindexeodprices                      SEC_ID   varchar(10)               
+chinaoptionindexeodprices                      OPDATE          date               
+chinaoptionindexeodprices                      OPMODE    varchar(1)               
+     chinaoptionvaluation                   OBJECT_ID  varchar(100)               
+     chinaoptionvaluation             S_INFO_WINDCODE   varchar(40)               
+     chinaoptionvaluation                    TRADE_DT    varchar(8)               
+     chinaoptionvaluation W_ANAL_UNDERLYINGIMPLIEDVOL decimal(24,8)               
+     chinaoptionvaluation                W_ANAL_DELTA decimal(24,8)               
+     chinaoptionvaluation                W_ANAL_THETA decimal(24,8)               
+     chinaoptionvaluation                W_ANAL_GAMMA decimal(24,8)               
+     chinaoptionvaluation                 W_ANAL_VEGA decimal(24,8)               
+     chinaoptionvaluation                  W_ANAL_RHO decimal(24,8)               
+     chinaoptionvaluation                SURGED_LIMIT decimal(24,8)               
+     chinaoptionvaluation               DECLINE_LIMIT decimal(24,8)               
+     chinaoptionvaluation                      OPDATE          date               
+     chinaoptionvaluation                      OPMODE    varchar(1)               
+     coptioncontprochange                   OBJECT_ID  varchar(100)               
+     coptioncontprochange                 CONTRACT_ID   varchar(40)               
+     coptioncontprochange                        ITEM   varchar(50)               
+     coptioncontprochange                   CHANGE_DT    varchar(8)               
+     coptioncontprochange                  S_INFO_OLD varchar(1000)               
+     coptioncontprochange                  S_INFO_NEW varchar(1000)               
+     coptioncontprochange                      OPDATE          date               
+     coptioncontprochange                      OPMODE    varchar(1)               
+ coptiondescriptionchange                   OBJECT_ID   varchar(38)               
+ coptiondescriptionchange             S_INFO_WINDCODE   varchar(40)               
+ coptiondescriptionchange               S_CHANGE_DATE    varchar(8)               
+ coptiondescriptionchange             S_INFO_CODE_OLD   varchar(20)               
+ coptiondescriptionchange             S_INFO_NAME_OLD   varchar(40)               
+ coptiondescriptionchange        S_EXERCISE_PRICE_OLD decimal(20,4)               
+ coptiondescriptionchange                  S_UNIT_OLD decimal(20,4)               
+ coptiondescriptionchange             S_INFO_CODE_NEW   varchar(20)               
+ coptiondescriptionchange             S_INFO_NAME_NEW   varchar(40)               
+ coptiondescriptionchange        S_EXERCISE_PRICE_NEW decimal(20,4)               
+ coptiondescriptionchange                  S_UNIT_NEW decimal(20,4)               
+ coptiondescriptionchange             S_CHANGE_REASON  varchar(300)               
+ coptiondescriptionchange                      OPDATE          date               
+ coptiondescriptionchange                      OPMODE    varchar(1)               
+ coptionimpliedvolatility                   OBJECT_ID   varchar(38)               
+ coptionimpliedvolatility                 CONTRACT_ID   varchar(10)               
+ coptionimpliedvolatility               S_INFO_SCCODE   varchar(20)               
+ coptionimpliedvolatility             VOLATILITY_TYPE  decimal(9,0)               
+ coptionimpliedvolatility                        TERM   varchar(20)               
+ coptionimpliedvolatility W_ANAL_UNDERLYINGIMPLIEDVOL decimal(20,4)               
+ coptionimpliedvolatility                 APPLY_MODEL  varchar(100)               
+ coptionimpliedvolatility                     SOURCE1  varchar(100)               
+ coptionimpliedvolatility                    TRADE_DT    varchar(8)               
+ coptionimpliedvolatility                      OPDATE          date               
+ coptionimpliedvolatility                      OPMODE    varchar(1)               
+      coptionsmarginratio                   OBJECT_ID  varchar(100)               
+      coptionsmarginratio             S_INFO_WINDCODE   varchar(40)               
+      coptionsmarginratio                    TRADE_DT    varchar(8)               
+      coptionsmarginratio              INITIAL_MARGIN decimal(20,4)               
+      coptionsmarginratio          MAINTENANCE_MARGIN decimal(20,4)               
+      coptionsmarginratio               CLNHUS_MARGIN decimal(20,4)               
+      coptionsmarginratio                      OPDATE          date               
+      coptionsmarginratio                      OPMODE    varchar(1)               
+ windchinaoptionvaluation                   OBJECT_ID  varchar(100)               
+ windchinaoptionvaluation             S_INFO_WINDCODE   varchar(40)               
+ windchinaoptionvaluation                    TRADE_DT    varchar(8)               
+ windchinaoptionvaluation W_ANAL_UNDERLYINGIMPLIEDVOL decimal(24,8)               
+ windchinaoptionvaluation                THEORE_PRICE decimal(24,8)               
+ windchinaoptionvaluation                W_ANAL_DELTA decimal(24,8)               
+ windchinaoptionvaluation                W_ANAL_THETA decimal(24,8)               
+ windchinaoptionvaluation                W_ANAL_GAMMA decimal(24,8)               
+ windchinaoptionvaluation                 W_ANAL_VEGA decimal(24,8)               
+ windchinaoptionvaluation                  W_ANAL_RHO decimal(24,8)               
+ windchinaoptionvaluation                      OPDATE          date               
+ windchinaoptionvaluation                      OPMODE    varchar(1)               
+underlying_contract_properties 记录数 1
+underlying_fund_identity 记录数 1
+underlying_all_option_descriptions 记录数 5016
+sample_chinaoptioneodprices 记录数 96
+sample_chinaoptionvaluation 记录数 96
+sample_windchinaoptionvaluation 记录数 96
+sample_coptionsmarginratio 记录数 96
+sample_contract_adjustments 记录数 24
+sample_product_changes 记录数 0
+sample_etf_prices 记录数 2
+sample_option_calendar 记录数 7
+sample_ashare_calendar 记录数 5
+sample_rates 记录数 52
+sample_all_sh_option_prices 记录数 508
+first_510050_option_day 记录数 40
+                       表名        范围 边界 TRADE_DT    S_INFO_WINDCODE
+     chinaoptioneodprices        全表 最早 20150209        10000012.SH
+     chinaoptioneodprices        全表 最晚 20260826   PD2704-C-216.GFE
+     chinaoptionvaluation        全表 最早 20150209        10000027.SH
+     chinaoptionvaluation        全表 最晚 20260827   AG2611C21800.SHF
+ windchinaoptionvaluation        全表 最早 20170405        10000730.SH
+ windchinaoptionvaluation        全表 最晚 20260826 PS2708-P-40000.GFE
+ coptionimpliedvolatility        全表 最早 20171120                NaN
+ coptionimpliedvolatility        全表 最晚 20260826                NaN
+chinaoptionindexeodprices        全表 最早 20031231          000016.SH
+chinaoptionindexeodprices        全表 最晚 20260826          510500.SH
+     chinaoptioneodprices 510050.SH 最早 20150209                NaN
+     chinaoptioneodprices 510050.SH 最晚 20260826                NaN
+fund_dividend_candidates 记录数 5271
+ashare_dividend_510050_check 记录数 0
+                      表名       日期  在市代码数  record_count  unique_codes  W_ANAL_UNDERLYINGIMPLIEDVOL  W_ANAL_DELTA  W_ANAL_GAMMA  W_ANAL_THETA  W_ANAL_VEGA  W_ANAL_RHO
+    chinaoptionvaluation 20150209     40            40            40                            0            40            40            40           40          40
+windchinaoptionvaluation 20150209     40             0             0                            0             0             0             0            0           0
+    chinaoptionvaluation 20170405     66            66            66                            0            66            66            66           66          66
+windchinaoptionvaluation 20170405     66            56            56                           56            56            56            56           56          56
+    chinaoptionvaluation 20241203    212           212           212                            0           212           212           212          212         212
+windchinaoptionvaluation 20241203    212           212           212                          212           212           212           212          212         212
+    chinaoptionvaluation 20250715     96            96            96                            0            96            96            96           96          96
+windchinaoptionvaluation 20250715     96            96            96                           96            96            96            96           96          96
+    chinaoptionvaluation 20251218    180           180           180                            0           180           180           180          180         180
+windchinaoptionvaluation 20251218    180           180           180                          177           180           180           180          180         180
+    chinaoptionvaluation 20260826     94            94            94                            0             0             0             0            0           0
+windchinaoptionvaluation 20260826     94            94            94                           94            94            94            94           94          94
+品种IV记录数 360
+基金除权标志记录数 19 分配字段非零变动数 18
+          合约数  最小执行价  最大执行价  零成交数  缺失行情数  主表Delta非空数  主表IV非空数  Wind表IV非空数
+expiry                                                                   
+20250723   11   2.55    3.1     0      0          11        0          11
+20250827   10   2.60    3.1     0      0          10        0          10
+20250924   15   2.35    3.1     0      0          15        0          15
+20251224   12   2.50    3.1     0      0          12        0          12
+验证 19 / 19

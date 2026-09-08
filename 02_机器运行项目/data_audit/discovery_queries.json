@@ -1,0 +1,52 @@
+[
+  {
+    "sql": "SELECT TABLE_SCHEMA,TABLE_NAME,TABLE_TYPE,ENGINE,\n          TABLE_ROWS,TABLE_COMMENT FROM information_schema.tables\n          WHERE TABLE_SCHEMA=%s ORDER BY TABLE_NAME",
+    "parameters": [
+      "financedata"
+    ],
+    "rows": 200,
+    "seconds": 0.051,
+    "queried_at": "2026-08-27T11:21:20.376345+08:00"
+  },
+  {
+    "sql": "SELECT TABLE_SCHEMA,TABLE_NAME,ORDINAL_POSITION,\n          COLUMN_NAME,COLUMN_TYPE,IS_NULLABLE,COLUMN_KEY,COLUMN_COMMENT\n          FROM information_schema.columns WHERE TABLE_SCHEMA=%s\n          ORDER BY TABLE_NAME,ORDINAL_POSITION",
+    "parameters": [
+      "financedata"
+    ],
+    "rows": 5437,
+    "seconds": 0.349,
+    "queried_at": "2026-08-27T11:21:20.766789+08:00"
+  },
+  {
+    "sql": "SELECT TABLE_NAME,INDEX_NAME,NON_UNIQUE,SEQ_IN_INDEX,COLUMN_NAME,CARDINALITY\n          FROM information_schema.statistics WHERE TABLE_SCHEMA=%s AND TABLE_NAME IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)\n          ORDER BY TABLE_NAME,INDEX_NAME,SEQ_IN_INDEX",
+    "parameters": [
+      "financedata",
+      "asharecalendar",
+      "asharedividend",
+      "chinaclosedfundeodprice",
+      "chinaetfinvestclass",
+      "chinaetfpchredmlist",
+      "chinaetfpchredmmembers",
+      "chinamutualfundbenchmarkeod",
+      "chinamutualfunddescription",
+      "chinaoptioncalendar",
+      "chinaoptioncontpro",
+      "chinaoptiondescription",
+      "chinaoptioneodprices",
+      "chinaoptionindexeodprices",
+      "chinaoptionvaluation",
+      "coptioncontprochange",
+      "coptiondescriptionchange",
+      "coptionimpliedvolatility",
+      "coptionsmarginratio",
+      "globalfundindexeodwind",
+      "shszrelatedsecurities",
+      "windbenchmarkinterestrate",
+      "windchinaoptionvaluation",
+      "windcustomcode"
+    ],
+    "rows": 111,
+    "seconds": 0.059,
+    "queried_at": "2026-08-27T11:21:20.932378+08:00"
+  }
+]

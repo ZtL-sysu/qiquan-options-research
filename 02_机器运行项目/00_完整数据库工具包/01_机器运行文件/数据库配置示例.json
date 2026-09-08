@@ -1,0 +1,8 @@
+{
+  "host": "请填写数据库地址",
+  "user": "请填写数据库用户名",
+  "password": "请填写数据库密码",
+  "database": "financedata",
+  "port": 3306,
+  "charset": "gbk"
+}

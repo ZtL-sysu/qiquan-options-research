@@ -1,0 +1,13 @@
+test_adjusted_encoded_strike_is_not_effective_strike (test_audit.TermsTest) ... ok
+test_duplicate_events_rejected (test_audit.TermsTest) ... ok
+test_effective_date_inclusive (test_audit.TermsTest) ... ok
+test_future_event_does_not_change_past_terms (test_audit.TermsTest) ... ok
+test_inconsistent_latest_snapshot_rejected (test_audit.TermsTest) ... ok
+test_invalid_code_rejected (test_audit.TermsTest) ... ok
+test_multiple_events_choose_next_old_terms (test_audit.TermsTest) ... ok
+test_static_without_event (test_audit.TermsTest) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.047s
+
+OK

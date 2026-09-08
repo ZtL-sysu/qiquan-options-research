@@ -1,0 +1,13 @@
+﻿表名,范围,边界,TRADE_DT,S_INFO_WINDCODE
+chinaoptioneodprices,全表,最早,20150209,10000012.SH
+chinaoptioneodprices,全表,最晚,20260826,PD2704-C-216.GFE
+chinaoptionvaluation,全表,最早,20150209,10000027.SH
+chinaoptionvaluation,全表,最晚,20260827,AG2611C21800.SHF
+windchinaoptionvaluation,全表,最早,20170405,10000730.SH
+windchinaoptionvaluation,全表,最晚,20260826,PS2708-P-40000.GFE
+coptionimpliedvolatility,全表,最早,20171120,
+coptionimpliedvolatility,全表,最晚,20260826,
+chinaoptionindexeodprices,全表,最早,20031231,000016.SH
+chinaoptionindexeodprices,全表,最晚,20260826,510500.SH
+chinaoptioneodprices,510050.SH,最早,20150209,
+chinaoptioneodprices,510050.SH,最晚,20260826,

@@ -1,0 +1,21 @@
+﻿标准字段,中文含义,来源表,来源字段或公式,单位,注意事项
+option_code,期权代码,chinaoptiondescription,S_INFO_WINDCODE,字符串,保留交易所后缀
+underlying_code,标的代码,chinaoptioncontpro / chinamutualfunddescription,S_INFO_UDLSECID -> SEC_ID -> F_INFO_WINDCODE,字符串,本样本直接证券ID关联
+trade_date,交易日期,chinaoptioneodprices / 估值表,TRADE_DT,YYYYMMDD,按同一业务日期一对一合并
+call_put,认购认沽,chinaoptiondescription,S_INFO_CALLPUT,C/P,本样本708001000=C；708002000=P，经代码交叉核验
+strike,历史执行价,chinaoptiondescription + coptiondescriptionchange,"S_INFO_STRIKEPRICE / S_EXERCISE_PRICE_OLD,NEW",元/ETF份,按S_CHANGE_DATE恢复；不是最新静态值
+expiry,到期日期,chinaoptiondescription,S_INFO_MATURITYDATE,YYYYMMDD,须>=交易日期
+contract_multiplier,历史合约乘数,chinaoptiondescription + coptiondescriptionchange,"S_INFO_COUNIT / S_UNIT_OLD,NEW",ETF份/张,不能统一写死10000，按历史条款恢复
+close,期权收盘价,chinaoptioneodprices,S_DQ_CLOSE,元/ETF份,不作价格填补；不保证实际可成交
+settle,期权结算价,chinaoptioneodprices,S_DQ_SETTLE,元/ETF份,不替代交易成交价
+volume,期权成交量,chinaoptioneodprices,S_DQ_VOLUME,手,保留数据库原始单位；零成交也保留在完整链
+open_interest,期权持仓量,chinaoptioneodprices,S_DQ_OI,手,不与ETF成交量单位混淆
+delta/gamma/theta/vega/rho,主表Greeks,chinaoptionvaluation,W_ANAL_DELTA/GAMMA/THETA/VEGA/RHO,原始数据库值,需补充供应商模型和单位定义；最新样本存在全空
+implied_vol_primary,主表IV,chinaoptionvaluation,W_ANAL_UNDERLYINGIMPLIEDVOL,原始数据库值,20250715全部缺失；不填0
+implied_vol,辅助来源IV,windchinaoptionvaluation,W_ANAL_UNDERLYINGIMPLIEDVOL,原始数据库值，未换算百分比,不是主表IV；保留implied_vol_source
+delta_wind/gamma_wind/theta_wind/vega_wind/rho_wind,另一来源Greeks,windchinaoptionvaluation,W_ANAL_DELTA/GAMMA/THETA/VEGA/RHO,原始数据库值,不可视作与主表同一口径
+adjusted_contract_flag,历史调整标志,本地派生，历史交易代码,历史S_INFO_EXCODE第12位,布尔,ADJ_SIGN不存在；M为未调整，其他有效调整字母标记调整
+underlying_raw_close,ETF原始收盘价,chinaclosedfundeodprice,S_DQ_CLOSE,元/份,用于执行价比较；不能用ADJCLOSE代替
+moneyness,执行价与标的价格比,本地派生,strike / underlying_raw_close,比例,没有用于策略选约，仅样本核对
+calendar_DTE,剩余自然日,本地派生,expiry - trade_date,自然日,不是交易日差
+dividend_candidate,每份分配候选金额,chinamutualfundnav,F_NAV_DISTRIBUTION按日期差分,候选元/份，经ETF价格除权差核对,只有候选除息日期和金额；没有确认支付日
