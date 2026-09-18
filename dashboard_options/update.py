@@ -26,7 +26,8 @@ def main():
     write(OUT / "index.html", home)
     for strategy in payload["research"]["covered_call"]:
         write(OUT / "strategy" / f"{strategy['id']}.html", render(ROOT / "templates/strategy.html", payload, strategy["id"]))
-    print(json.dumps({"status": "published", "market_as_of": payload["market"]["as_of"], "mode": payload["freshness"]["status"]}, ensure_ascii=False))
+    dates = {key: row.get("as_of") for key, row in payload["market"].get("markets", {}).items()}
+    print(json.dumps({"status": "published", "market_as_of": dates, "mode": payload["freshness"]["status"]}, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
